@@ -21,12 +21,12 @@ for _ in range(2):
     t.forward(yr3-yr4)
     t.right(90)
 
-if xr1 > xr4 or xr2 < xr3 or yr1 < yr4 or yr2 > yr3:
+if abs(xr1 > xr4 or xr2 < xr3 or yr1 < yr4 or yr2 > yr3):
     print('Прямоугольники лежат вне друг друга, не касаясь')
-elif xr1 == xr4 or xr2 == xr3 or yr1 == yr4 or yr2 == yr3:
+elif abs(xr1 == xr4 or xr2 == xr3 or yr1 == yr4 or yr2 == yr3):
     print('Прямоугольники имеют касание')
-elif xr1 > xr3 and xr2 < xr4 and yr1 < yr3 and yr2 > yr4:
+elif abs(xr1 > xr3 and xr2 < xr4 and yr1 < yr3 and yr2 > yr4):
     print('Один лежит внутри другого не касаясь')
-elif (xr1 > xr4 or xr2 < xr3 or yr1 < yr4 or yr2 > yr3) and not (xr1 == xr4 or xr2 == xr3
+elif abs(xr1 > xr4 or xr2 < xr3 or yr1 < yr4 or yr2 > yr3) and not abs(xr1 == xr4 or xr2 == xr3
                                                                 or yr1 == yr4 or yr2 == yr3):
     print('Имеют пересечение')
